@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
 "scripts": {
-"start": "npm list json-server && node server.js"
+"start": "npx json-server --watch userdata.json --static ."
 },
   "keywords": [],
   "author": "",
