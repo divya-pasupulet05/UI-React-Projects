@@ -1,4 +1,4 @@
-const jsonServer = require(require.resolve("json-server"));
+const jsonServer = require("json-server");
 const path = require("path");
 
 const server = jsonServer.create();
