@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/UI-React-Projects/static/css/main.7d72cf6d.css",
+    "main.js": "/UI-React-Projects/static/js/main.def71fca.js",
+    "static/js/453.d2ca105c.chunk.js": "/UI-React-Projects/static/js/453.d2ca105c.chunk.js",
+    "static/media/Login.mp4": "/UI-React-Projects/static/media/Login.efe6d0288c2bca5f3f22.mp4",
+    "static/media/Loginbg.mp4": "/UI-React-Projects/static/media/Loginbg.c89df67899f39c006be4.mp4",
+    "static/media/starteer3.jpeg": "/UI-React-Projects/static/media/starteer3.510fad49d6dda4213724.jpeg",
+    "static/media/pizza3.jpeg": "/UI-React-Projects/static/media/pizza3.5258f78f528d30d9f87f.jpeg",
+    "static/media/biryani7.jpeg": "/UI-React-Projects/static/media/biryani7.33719e9271e6878efe3d.jpeg",
+    "static/media/pizza1.jpeg": "/UI-React-Projects/static/media/pizza1.33719e9271e6878efe3d.jpeg",
+    "static/media/bf7.jpeg": "/UI-React-Projects/static/media/bf7.d491fe9cb37ae363be80.jpeg",
+    "static/media/bf5.jpeg": "/UI-React-Projects/static/media/bf5.21900e724aa6d60b752a.jpeg",
+    "static/media/bf6.jpeg": "/UI-React-Projects/static/media/bf6.ff5455bf67660bb31225.jpeg",
+    "static/media/starter2.jpeg": "/UI-React-Projects/static/media/starter2.2cca767ebec826d393c7.jpeg",
+    "static/media/pizza2.jpeg": "/UI-React-Projects/static/media/pizza2.5f5fdbc97cf368ca6d70.jpeg",
+    "static/media/bf4.jpeg": "/UI-React-Projects/static/media/bf4.c1b4b809a089d423a9eb.jpeg",
+    "static/media/biryani6.jpeg": "/UI-React-Projects/static/media/biryani6.f2d598044126617488fe.jpeg",
+    "static/media/starter1.jpeg": "/UI-React-Projects/static/media/starter1.fffe1ada728b1df04c37.jpeg",
+    "static/media/biryani2.jpeg": "/UI-React-Projects/static/media/biryani2.e6f08b3386561d90cecf.jpeg",
+    "static/media/biryani5.jpeg": "/UI-React-Projects/static/media/biryani5.198df80ad53a4d3855c5.jpeg",
+    "static/media/starter5.jpeg": "/UI-React-Projects/static/media/starter5.91fb94b35f54b60d0ed2.jpeg",
+    "static/media/bf1.jpeg": "/UI-React-Projects/static/media/bf1.62e4fd189a314f56bf1a.jpeg",
+    "static/media/starter4.jpeg": "/UI-React-Projects/static/media/starter4.d8c349d293df1b4ff9ec.jpeg",
+    "static/media/biryani4.jpeg": "/UI-React-Projects/static/media/biryani4.241a5b3590307751b3d0.jpeg",
+    "static/media/emailicon.jpeg": "/UI-React-Projects/static/media/emailicon.166b92f055a10b7afcd2.jpeg",
+    "static/media/biryani3.jpeg": "/UI-React-Projects/static/media/biryani3.19ed1c20330227c9ec0e.jpeg",
+    "static/media/biryani1.jpeg": "/UI-React-Projects/static/media/biryani1.4d9450d251a74aac9e8c.jpeg",
+    "static/media/bf3.jpeg": "/UI-React-Projects/static/media/bf3.bbe5a7466cc76266ecb5.jpeg",
+    "static/media/bf2.jpeg": "/UI-React-Projects/static/media/bf2.e1333e505c343e2dd58a.jpeg",
+    "static/media/logo.svg": "/UI-React-Projects/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/UI-React-Projects/index.html",
+    "main.7d72cf6d.css.map": "/UI-React-Projects/static/css/main.7d72cf6d.css.map",
+    "main.def71fca.js.map": "/UI-React-Projects/static/js/main.def71fca.js.map",
+    "453.d2ca105c.chunk.js.map": "/UI-React-Projects/static/js/453.d2ca105c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d72cf6d.css",
+    "static/js/main.def71fca.js"
+  ]
+}
