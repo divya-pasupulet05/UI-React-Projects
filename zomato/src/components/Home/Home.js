@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Login from '../Images/Loginbg.mp4';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CartModal from './CartModal'; 
+import productsData from '../Data/Products'; 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -55,12 +56,8 @@ useEffect(() => {
 }, []);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/products')
-      .then(response => {
-        setProducts(response.data);
-        console.log('Products fetched:', response.data);
-      })
-      .catch(error => console.error('Error fetching products:', error));
+     setProducts(productsData);
+
   }, []);
 
  // Filter products only by search term

@@ -2,9 +2,9 @@ import React,{useState} from 'react';
 import google from '../Images/Googleicon.jpeg';
 import email from '../Images/emailicon.jpeg';
 import {Button, TextField, Typography} from '@mui/material';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Loginbg from '../Images/Login.mp4';
+import usersdata from '../Data/usersData';
 const Login = () => {
    const [emailValue, setEmailValue] = useState('');
     const [error, setError] = useState('');
@@ -13,43 +13,45 @@ const Login = () => {
 
   const navigate = useNavigate();
     // Function to handle sign up (POST request)
+const [users, setUsers] = useState(usersdata);
+
   const handleSignup = () => {
     setError('');
-    axios
-      .post('http://localhost:3000/users', { email: emailValue })
-      .then(response => {
-        setSuccess('Sign up successful! You can now log in.');
-        setShowSignup(false);
-      })
-      .catch(error => {
-        setError('There was an error signing up.');
-        console.error('There was an error signing up:', error);
-      });
+    const userExists = users.some(user => user.email === emailValue);
+
+    if (userExists) {
+      setError('Email already registered.');
+    } else {
+      const newUser = {
+        id: Math.random().toString(16).slice(2),
+        email: emailValue
+      };
+      const updatedUsers = [...users, newUser];
+      setUsers(updatedUsers);
+      setSuccess('Sign up successful! You can now log in.');
+      setShowSignup(false);
+      console.log('New user added:', newUser);
+    }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-     setShowSignup(false);
-    setError('');
-    axios
-      .get(`http://localhost:3000/users?email=${emailValue}`)
-      .then(response => {
-        if (response.data.length > 0) {
-          setSuccess('Login successful!');
-          setShowSignup(false);
-          navigate('/home'); // Redirect to home page after successful login
-        
-        } else {
-          setShowSignup(true);
 
-          setError('Email not found. Please sign up.');
-        }
-      })
-      .catch(error => {
-        setError('There was an error logging in.');
-        console.error('There was an error logging in:', error);
-      });
-  };
+const handleSubmit = (event) => {
+  event.preventDefault();
+  setError('');
+  const userFound = users.find(user => user.email === emailValue);
+
+  if (userFound) {
+    setSuccess('Login successful!');
+    setShowSignup(false);
+    navigate('/home'); // Redirect to home page
+    console.log('User found:', emailValue);
+  } else {
+    setShowSignup(true);
+    setError('Email not found. Please sign up.');
+    console.log('User not found:', emailValue);
+  }
+};
+
     const handleChange = (event) => {
     setEmailValue(event.target.value);
   };
