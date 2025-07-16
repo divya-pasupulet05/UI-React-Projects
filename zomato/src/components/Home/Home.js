@@ -157,7 +157,7 @@ useEffect(() => {
       }}
     >
       <img
-        src={`http://localhost:3000${product.image}`}
+        src={`${process.env.PUBLIC_URL}${product.image}`}
         alt={product.name}
         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
       />
