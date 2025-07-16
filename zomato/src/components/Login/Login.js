@@ -5,6 +5,7 @@ import {Button, TextField, Typography} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Loginbg from '../Images/Login.mp4';
 import usersdata from '../Data/usersData';
+import poster from '../Images/poster.jpeg';
 const Login = () => {
    const [emailValue, setEmailValue] = useState('');
     const [error, setError] = useState('');
@@ -69,6 +70,7 @@ const handleSubmit = (event) => {
         loop
         muted
         playsInline
+        poster={poster}
         style={{
            position: 'fixed',
         top: 0,

@@ -1,6 +1,7 @@
 import {useState}from 'react';
 import Login from '../Images/Login.mp4';
 import LocationMap from './LocationMap';
+import poster from '../Images/poster.jpeg';
 const CartModal = ({ cartItems, onClose, onRemove ,setCartItems,setCartCount}) => {
 const [showMap, setShowMap] = useState(false);
   return (
@@ -41,7 +42,7 @@ const [showMap, setShowMap] = useState(false);
   textAlign: 'center'
 }}>
  <video
-    
+    poster={poster}
      width="150"
      height="80"
      style={{ borderRadius: '10px', objectFit: 'cover' }}
