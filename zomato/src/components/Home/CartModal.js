@@ -90,7 +90,7 @@ const [showMap, setShowMap] = useState(false);
               }}
             >
               <img
-                src={`http://localhost:3000${item.image}`}
+               src={`${process.env.PUBLIC_URL}${item.image}`}
                 alt={item.name}
                 style={{
                   width: '180px',
