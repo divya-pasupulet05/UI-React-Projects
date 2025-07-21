@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Loginbg from '../Images/Login.mp4';
 import usersdata from '../Data/usersData';
 import poster from '../Images/poster.jpeg';
+import './login.css'; 
 const Login = () => {
    const [emailValue, setEmailValue] = useState('');
     const [error, setError] = useState('');
@@ -57,44 +58,27 @@ const handleSubmit = (event) => {
     setEmailValue(event.target.value);
   };
   return (
-    <div style={{ position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
-      margin: 0,
-      padding: 0,
-      overflow: 'hidden',}}>
+    <div className='login-container'>
       <video
         autoPlay
         loop
         muted
         playsInline
         poster={poster}
-        style={{
-           position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        zIndex: -1,
-        objectFit: 'cover',
-        margin: 0,
-        padding: 0,
-        }}
+     className='login-background'
       >
         <source src={Loginbg} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div style={{width:'50%',display:'flex',justifyContent:'center',alignItems:"center",marginLeft:"360px",flexDirection:"column",marginTop:"50px"}}>
+      <div className='login-content'>
         {/* <img src={image} alt="Login" style={{ width:'50%' }} /> */}
         {/* <br/> */}
         <Typography variant="h2" style={{ margin: '8px', color: 'white' ,fontStyle:'italic',fontSize:'60px',fontWeight:'bold'}}>Zomato</Typography>
          <Typography variant="h3" style={{ margin: '8px', color: 'white' }}>
             India's #1 food delivery app</Typography>
             <Typography style={{ margin: '10px', color: 'white' }}>
-        __________________ Log in or sign up ___________________</Typography>
+        ________ Log in or sign up _________</Typography>
         <TextField
             label="Enter your email address" 
             style={{ margin: '10px', width: '400px',height: '10px',marginBottom:"50px" ,  background: 'none' }}
@@ -127,7 +111,7 @@ const handleSubmit = (event) => {
           </Button>
         )}
        <Typography style={{ margin: '10px', color: 'black' }}>
-       _________________________ or __________________________</Typography>
+       ________________or ________________</Typography>
       <span style={{ display: 'inline-flex', alignItems: 'center' }}>
   <img src={google} alt="Google Icon" style={{ width: '40px', height: '40px', marginRight: '60px',borderRadius: '50%',marginBottom:"5px"}} />
   <img src={email} alt="Email Icon" style={{ width: '40px', height: '40px', marginRight: '30px',borderRadius: '50%',marginBottom:"5px"}} />

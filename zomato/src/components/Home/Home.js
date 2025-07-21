@@ -6,6 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CartModal from '../cart-modal/CartModal'; 
 import productsData from '../Data/Products';
 import funnyCaptions from './captions'; 
+import './home.css';
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -38,9 +39,7 @@ useEffect(() => {
     <div>
    <video
    
-    width="1550"
-    height="400"
-    style={{ borderRadius: '10px', objectFit: 'cover' }}
+   className="video-banner"
     autoPlay
     loop
     muted>
@@ -56,15 +55,10 @@ useEffect(() => {
               <SearchIcon />
             </InputAdornment>
           }
-        style={{
-          margin: ' 0',
-          padding: '8px',
-          width: '600px',
-          borderRadius: '14px',
-         
-        }}
+        className="search-input"
+
       />
-       {/* <div style={{ display: 'flex',  gap: '12px' }}> */}
+     
   <IconButton onClick={() => setShowCart(!showCart)}>
     <Badge badgeContent={cartCount} color="error">
       <ShoppingCartIcon fontSize="large" />
@@ -72,13 +66,7 @@ useEffect(() => {
   </IconButton>
 
   {/* Funny Caption */}
-  <span style={{
-    fontSize: '0.9rem',
-    color: '#ff7043',
-    fontWeight: 'bold',
-    animation: 'fadeInOut 5s ease-in-out infinite',
-    whiteSpace: 'nowrap'
-  }}>
+  <span className="caption-text">
     {funnyCaptions[captionIndex]}
   </span>
 
@@ -100,7 +88,7 @@ useEffect(() => {
   />
 )}
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' ,textAlign: 'center', justifyContent: 'center', marginTop: '20px'  }}>
+      <div  className="product-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', marginTop: '20px' }}>
         {filteredProducts.length === 0 && (
           <div style={{ color: 'red', margin: '20px' ,fontWeight: 'bold',fontSize: '1.2rem'}}>
             Oops...No results....try again!
