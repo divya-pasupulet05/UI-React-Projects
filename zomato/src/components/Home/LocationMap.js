@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 
 const LocationMap = ({ onClose }) => {
   const [location, setLocation] = useState(null);
+  const [address, setAddress] = useState('');
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -16,6 +17,17 @@ const LocationMap = ({ onClose }) => {
       }
     );
   }, []);
+
+useEffect(() => {
+  if (location) {
+    fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${location[0]}&lon=${location[1]}`)
+      .then(res => res.json())
+      .then(data => {
+        console.log("Address:", data.display_name);
+        // You can save or display this address to the user
+      });
+  }
+}, [location]);
 
   return (
     <div
@@ -56,7 +68,7 @@ const LocationMap = ({ onClose }) => {
               url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             />
             <Marker position={location}>
-              <Popup>You are here!</Popup>
+              <Popup>hey you are here!</Popup>
             </Marker>
           </MapContainer>
         )}
@@ -75,6 +87,7 @@ const LocationMap = ({ onClose }) => {
         >
           Close Map
         </button>
+        <button onClick={() => setAddress(address)}>Confirm Address</button>
       </div>
     </div>
   );

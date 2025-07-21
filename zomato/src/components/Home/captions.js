@@ -1,0 +1,33 @@
+const funnyCaptions = [
+  "Currying favor with good taste 🍛",
+  "Samosa squad activated 😎",
+  "Thali goals ✔️",
+  "Serving up joy one bite at a time 🥄",
+  "Keep calm and eat pav bhaji 🍞",
+  "Daal yeah! 🌱",
+  "Ready to rice and shine 🍚",
+  "Butter chicken dreams 🧈🐔",
+  "No drama, just dosa 🥰",
+  "Tikka me seriously 🌟",
+  "Welcome to the naaniverse 🌌",
+  "Masala mission accepted 🔥",
+  "Biryani is my spirit animal 🐯",
+  "Just chapati-ning around 😆",
+  "More chaat, less chat 😜",
+  "This cart’s got soul (and spice) 🎶🌶️",
+  "The snack life chose me 🍟",
+  "Zero regrets, full plate 🤌",
+   "Biryani loaded! 🔥",
+  "Don’t scroll hungry 🍛",
+  "Chaat happens 😋",
+  "Paneer for your thoughts 🧠🧀",
+  "Stay calm & curry on 🍛",
+  "Naan-stop cravings 🍞",
+  "You had me at masala ❤️",
+  "Rolling with my rotis 🫓",
+  "Welcome to Snackistan 🇮🇳",
+  "Zero regrets, full plate 🤌",
+  "Butter chicken dreams 🧈🐔"
+
+];
+export default funnyCaptions;

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Input, InputAdornment,Badge,IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import Login from '../Images/Loginbg.mp4';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import CartModal from './CartModal'; 
-import productsData from '../Data/Products'; 
+import CartModal from '../cart-modal/CartModal'; 
+import productsData from '../Data/Products';
+import funnyCaptions from './captions'; 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,38 +13,7 @@ const Home = () => {
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
-const funnyCaptions = [
-  "Currying favor with good taste 🍛",
-  "Samosa squad activated 😎",
-  "Thali goals ✔️",
-  "Serving up joy one bite at a time 🥄",
-  "Keep calm and eat pav bhaji 🍞",
-  "Daal yeah! 🌱",
-  "Ready to rice and shine 🍚",
-  "Butter chicken dreams 🧈🐔",
-  "No drama, just dosa 🥰",
-  "Tikka me seriously 🌟",
-  "Welcome to the naaniverse 🌌",
-  "Masala mission accepted 🔥",
-  "Biryani is my spirit animal 🐯",
-  "Just chapati-ning around 😆",
-  "More chaat, less chat 😜",
-  "This cart’s got soul (and spice) 🎶🌶️",
-  "The snack life chose me 🍟",
-  "Zero regrets, full plate 🤌",
-   "Biryani loaded! 🔥",
-  "Don’t scroll hungry 🍛",
-  "Chaat happens 😋",
-  "Paneer for your thoughts 🧠🧀",
-  "Stay calm & curry on 🍛",
-  "Naan-stop cravings 🍞",
-  "You had me at masala ❤️",
-  "Rolling with my rotis 🫓",
-  "Welcome to Snackistan 🇮🇳",
-  "Zero regrets, full plate 🤌",
-  "Butter chicken dreams 🧈🐔"
 
-];
 const [captionIndex, setCaptionIndex] = useState(0);
 
 useEffect(() => {
@@ -118,10 +87,12 @@ useEffect(() => {
   <CartModal
   setCartCount={setCartCount}
     setCartItems={setCartItems}
-  
+    setShowCart={setShowCart}
     cartItems={cartItems}
     onClose={() => setShowCart(false)}
-    onRemove={(index) => {
+    onRemove={(index
+      
+    ) => {
       const updatedCart = cartItems.filter((_, i) => i !== index);
       setCartItems(updatedCart);
       setCartCount(updatedCart.length);

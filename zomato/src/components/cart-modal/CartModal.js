@@ -1,9 +1,12 @@
 import {useState}from 'react';
 import Login from '../Images/Login.mp4';
-import LocationMap from './LocationMap';
+import Receipt  from './Receipt'
+import AddressForm from './AddressForm';
 import poster from '../Images/poster.jpeg';
 const CartModal = ({ cartItems, onClose, onRemove ,setCartItems,setCartCount}) => {
-const [showMap, setShowMap] = useState(false);
+const [showAddressForm, setShowAddressForm] = useState(false);
+const [userAddress, setUserAddress] = useState('');
+const [showReceipt, setShowReceipt] = useState(false);
   return (
     <div
       style={{
@@ -233,9 +236,8 @@ const [showMap, setShowMap] = useState(false);
           cursor: 'pointer',
           fontWeight: 'bold'
         }}
-        onClick={() => {
-          setShowMap(true);
-        }}
+     onClick={() => {
+      setShowAddressForm(true)}}
       >
         Place Order
       </button>
@@ -256,10 +258,28 @@ const [showMap, setShowMap] = useState(false);
     </div>
   </div>
 )}
-{showMap && <LocationMap onClose={() => setShowMap(false)} />}
-
       </div>
-      
+      {showAddressForm && (
+  <AddressForm
+    onSubmit={(address) => {
+      setUserAddress(address);
+      setShowAddressForm(false);
+      setShowReceipt(true);
+    }}
+    onClose={() => setShowAddressForm(false)}
+  />
+)}
+
+{showReceipt && (
+  <Receipt
+    address={userAddress}
+    cartItems={cartItems}
+  setCartCount={setCartCount}
+  setCartItems={setCartItems}
+
+  />
+)}
+    
     </div>
   );
 };
